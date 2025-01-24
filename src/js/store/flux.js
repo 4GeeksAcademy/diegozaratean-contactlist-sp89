@@ -12,12 +12,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			text: 'lucky desde flux',
+			message: 'texto inicial'
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
+			},
+			changeText: () => {
+				console.log('changeText desde flux')
+				setStore({ message: 'texto actualizado',text: 'lucky actualizado' });
 			},
 			loadSomeData: () => {
 				/**
